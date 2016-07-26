@@ -1,0 +1,16 @@
+
+
+
+<h4>Please Check your Content again, Here are Similar Contents  </h4> <hr>
+
+<strong>{{ num_articles }}</strong>
+<ul>
+    {% for related_article in article.related|slice:":10" %}
+
+
+
+        <li><a href="{{ related_article.get_absolute_url }}">{{ related_article }}</a></li>
+    {% endfor %}
+</ul>
+
+

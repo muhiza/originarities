@@ -1,0 +1,84 @@
+{% load static %}
+
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <p>
+                    <a href="{% url "home" %}">
+                        <strong>
+                            <span class="fa fa-fw fa-home"></span>
+                            Home Page
+                        </strong>
+                    </a>
+                </p>
+                <p>
+                    <a href="{% url "about" %}">
+                        <span class="fa fa-fw fa-info-circle"></span>
+                        About Us
+                    </a>
+                </p>
+
+
+
+                {% if not READ_ONLY %}
+                    <p>
+                        <a href="{% url "join" %}">
+                            <span class="fa fa-fw fa-plus-circle"></span>
+                            Join
+                        </a>
+                    </p>
+                {% endif %}
+            </div>
+            <div class="col-sm-3">
+                <p>
+                    <a href="{% url "feedback" %}">
+                        <span class="fa fa-fw fa-bullhorn"></span>
+                        Feedback
+                    </a>
+                </p>
+                <p>
+                    <a href="{% url "rss" %}">
+                        <span class="fa fa-fw fa-rss"></span>
+                        RSS Feed
+                    </a>
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="media">
+                    <div class="media-body">
+                        <p class="text-muted">
+                            Unless otherwise noted, all content is released under a
+                            <a href="#">ASI-D</a> license.
+                        </p>
+                    </div>
+                </div>
+                <br>
+
+                <script>
+  (function() {
+    var cx = '014112400010528166664:xz7wz66n0m8';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+                <p class="text-muted">
+                    Copyright &copy; 2016 -
+                    <a href="http://quickmediasolutions.com">AFRICA SMART INVESTMENT</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

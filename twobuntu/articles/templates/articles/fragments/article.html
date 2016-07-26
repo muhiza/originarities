@@ -1,0 +1,24 @@
+{% load gravatar %}
+
+
+<p class="truncate">
+    <a href="{{ article.get_absolute_url }}" title="{{ article }}">{{ article.body| slice:":90" }}, 
+    {{ article.body | length }} ... <i><u> more </u></i></a> &nbsp; &nbsp; Matching: <i>100%</i>  <br> 
+    <small>
+        <span class="timeago" title="{{ article.date|date:"c" }}">
+  {{ article.date|date:"DATETIME_FORMAT" }}</span>
+        by
+        <a href="{{ article.author.profile.get_absolute_url }}" title="{{ article.author.profile }}"> 
+
+            {{ article.author.profile }}
+
+
+        </a>
+    </small>
+</p>
+
+<p>
+</p>
+
+
+

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-8">
+            <h2>About Us</h2>
+            <p>
+                ASI-D is a non-profit group of bloggers from around the world.
+                We practice a style of reporting that's off the beaten path and designed for human beings.
+            </p>
+            <p>
+                Africa Smart Investments – Distribution ( ASI-D) offers innovative products combining high technology with affordable prices. We have won the trust of domestic and international markets because with technical assistance guaranteed at various points of the country, the user experiences high technology and innovation from the moment when the product is turned on. This translates our commitment with quality, now at hand!
+
+            </p>
+
+
+                        <p>
+                Africa Smart Investments – Distribution ( ASI-D) offers innovative products combining high technology with affordable prices. We have won the trust of domestic and international markets because with technical assistance guaranteed at various points of the country, the user experiences high technology and innovation from the moment when the product is turned on. This translates our commitment with quality, now at hand!
+                
+            </p>
+
+                        <p>
+                Africa Smart Investments – Distribution ( ASI-D) offers innovative products combining high technology with affordable prices. We have won the trust of domestic and international markets because with technical assistance guaranteed at various points of the country, the user experiences high technology and innovation from the moment when the product is turned on. This translates our commitment with quality, now at hand!
+                
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Development Facts</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        ASI-D is written in <a href="http://python.org">Python</a> and uses
+                        the <a href="http://djangoproject.com">Django</a> web framework.
+                        The user interface uses <a href="http://getbootstrap.com">Bootstrap 3</a>.
+                    </p>
+                    <p>
+                        Our articles are written in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>
+                        and stored in a <a href="http://www.postgresql.org/">PostgreSQL</a> database. The Markdown is rendered to HTML and cached with <a href="http://redis.io/">Redis</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Server Facts</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        This server (<em>{{ hostname }}</em>) is running
+                        <strong>Django {{ django_version }}</strong> on
+                        <strong>Python {{ python_version }}</strong>.
+                    </p>
+                    {% if commit %}
+                        <p>
+                            Also, this server is running on commit
+                            <a href="https://github.com/ASI-D/ASI-D-blog/commit/{{ commit.hash }}">{{ commit.hash }}</a>,
+                            which was created by {{ user }}.
+                        </p>
+                    {% endif %}
+                    <p>
+                        ASI-D currently has
+                        <strong>{{ num_users }}</strong>
+                        registered user{{ num_users|pluralize }}
+                        who ha{{ num_users|pluralize:"s,ve" }} written
+                        <strong>{{ num_articles }}</strong>
+                        article{{ num_articles|pluralize }}.
+                        {% if num_articles > 100 %}
+                            <em>That's a lot of articles!</em>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

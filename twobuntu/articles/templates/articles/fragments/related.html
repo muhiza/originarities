@@ -1,0 +1,9 @@
+
+<h4>Please Check your Content, Here are Similar Contents </h4>
+<ul>
+    {% for related_article in article.related|slice:":10" %}
+        <li><a href="{{ related_article.get_absolute_url }}">{{ related_article }}</a></li>
+    {% endfor %}
+</ul>
+
+

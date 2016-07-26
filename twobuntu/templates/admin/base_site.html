@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | ASI-Distributions Administration{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <style>
+        a.home { display: block; margin: 0 10px 10px; }
+    </style>
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">ASI-Distribution Administration</h1>
+    <a href="{% url "home" %}" class="home">&larr; Return to Home Page</a>
+{% endblock %}

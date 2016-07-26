@@ -1,0 +1,293 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+    background-color: #f5f5f5;
+}
+
+#card-image {
+	height: 235px;
+	padding: 10px;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*  cover  */
+#cover {
+	background: #222 url(../img/first.jpg) bottom center no-repeat;
+	background-size: cover;
+	color: white;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+#cover-caption {
+	width: 100%;
+}
+
+.section-content {
+	padding: 5rem 0;
+}
+
+
+
+h1 small {
+    display: block;
+    font-size: 1pt;
+    line-height: 14pt;
+}
+
+
+
+#about {
+	background: url(../img/about.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.about-text {
+	background: rgba(0,0,0,0.8);
+	color: white;
+	padding: 1.875rem;
+
+}
+
+
+#ressources, img {
+	width: 100%;
+	height: 100%;
+}
+
+#res {
+	width: 170px;
+	height: 152px;
+
+}
+
+
+#learners {
+	background: url(../img/positivo.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.learners-text {
+	background: rgba(0,0,0,0.8);
+	color: white;
+	padding: 1.875rem;
+
+}
+
+
+.navbar {
+    box-shadow: 0 0 80px black;
+    margin-bottom: 0;
+    background-color: #24c0d9;
+}
+
+.navbar-brand {
+    font-size: 20pt;
+
+}
+
+
+
+/* Space the Font Awesome icons away from text */
+
+.alert .fa {
+    margin-top: 6px;
+}
+
+.fa {
+    margin: 0 4px;
+}
+
+
+/* Implement "missing" classes. */
+
+.fade-bottom {
+    position: relative;
+}
+
+.fade-bottom:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 64px;
+    pointer-events: none;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), white);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(1, white));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0), white);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0), white);
+}
+
+.fixed {
+    position: fixed;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Implement "missing" elements. */
+
+.article img {
+    display: block;
+    margin: 20px auto;
+}
+
+.content {
+    background-color: white;
+    box-shadow: 0 0 8px #ccc;
+    padding: 16px 16px 32px;
+}
+
+.content h2:first-child,
+.content h4:first-child {
+    margin-top: 0;
+}
+
+.footer {
+    background-color: #ddd;
+    padding: 32px 0;
+}
+
+.footer img {
+    margin-top: 6px;
+}
+
+
+/* Featured styles. */
+
+.featured-article {
+    height: 200px;
+    overflow: hidden;
+}
+
+.featured-author {
+    height: 100px;
+    overflow: hidden;
+}
+
+
+/* Classes for the article editor */
+
+.editor {
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.editor .toolbar {
+    margin-bottom: 8px;
+}
+
+.editor .toolbar button {
+    background-color: #e3e3e3;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    height: 28px;
+    margin: 0 2px;
+    width: 28px;
+}
+
+.editor .toolbar button:hover {
+    background-color: #ccc;
+}
+
+.editor .toolbar .spacer {
+    display: inline-block;
+    width: 12px;
+}
+
+.editor .ace {
+    border: 1px solid #ccc;
+}
+
+
+/* Classes for the device art generator */
+
+.spinner-container {
+    position: relative;
+}
+
+.spinner-container .spinner {
+    background: url(../img/spinner.gif) center no-repeat;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.spinner-container.spinning img {
+    opacity: 0.3;
+}
+
+.spinner-container.spinning .spinner {
+    display: block;
+}
+
+
+/* Ensure the page is never wider than 992px. */
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+
+a {
+ -webkit-transition: .25s all;
+ transition: .25s all;
+}
+.card {
+ overflow: hidden;
+ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ -webkit-transition: .25s box-shadow;
+ transition: .25s box-shadow;
+}
+.card:focus, .card:hover {
+ box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.card-inverse .card-img-overlay {
+ background-color: rgba(51, 51, 51, 0.85);
+ border-color: rgba(51, 51, 51, 0.85);
+}
+
+
+// Box shadow helper
+@mixin BoxShadowHelper($level: 1){
+ @if $level == 1 {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+ }
+ @if $level == 2 {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+ }
+}
+a {transition: .25s all;}
+.card {
+ overflow: hidden;
+ @include BoxShadowHelper(1);
+ transition: .25s box-shadow;
+ &:focus,
+ &:hover {@include BoxShadowHelper(2);}
+}
+.card-inverse .card-img-overlay {
+ background-color: rgba(#333,.85);
+ border-color: rgba(#333,.85);
+}
+
+
